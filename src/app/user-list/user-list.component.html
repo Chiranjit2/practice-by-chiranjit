@@ -1,0 +1,44 @@
+<div class="header-title">CHIRANJIT LAYEK</div>
+<div>
+  <form [formGroup]="myForm" class="outer-form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <input
+        type="text"
+        matInput
+        formControlName="userName"
+        placeholder="Enter Your Name"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input
+        type="text"
+        matInput
+        formControlName="fatherName"
+        placeholder="Enter Your Father's Name"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input
+        type="text"
+        matInput
+        formControlName="address"
+        placeholder="Enter Your Address"
+      />
+    </mat-form-field>
+    <button
+      mat-button
+      type="submit"
+      class="submit-btn"
+      [disabled]="myForm.invalid"
+    >
+      Submit
+    </button>
+    <button mat-button type="button" class="reset-btn" (click)="onReset()">
+      Reset
+    </button>
+  </form>
+</div>
+
+<div style="margin: 1rem" *ngIf="isDisplay">
+  {{ myForm.getRawValue() | json }}
+</div>

@@ -1,0 +1,35 @@
+::ng-deep .mat-mdc-text-field-wrapper {
+  height: 40px !important;
+}
+::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+  padding-top: 8px !important;
+}
+
+.header-title {
+  background-color: #46d65a;
+  padding: 1rem;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.outer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+.submit-btn {
+  background-color: #0a7f95;
+  color: #fff;
+  width: 215px;
+  margin-bottom: 1rem;
+}
+.reset-btn {
+  background-color: lightgray;
+  color: black;
+  width: 215px;
+}
